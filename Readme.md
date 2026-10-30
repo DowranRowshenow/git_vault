@@ -1,10 +1,10 @@
-# VaultGit
+# GitVault
 
 Store private development files inside a public Git repository using a single encrypted vault file.
 
 ## Overview
 
-VaultGit allows developers to keep sensitive or machine-specific files alongside a project without requiring:
+GitVault allows developers to keep sensitive or machine-specific files alongside a project without requiring:
 
 - Private repositories
 - Cloud drives
@@ -43,7 +43,7 @@ Normally these files are:
 - Forgotten on another machine
 - Lost after system reinstalls
 
-VaultGit keeps those files inside the repository in encrypted form.
+GitVault keeps those files inside the repository in encrypted form.
 
 ---
 
@@ -69,7 +69,7 @@ MyProject/
 
 # Manifest File
 
-VaultGit uses a manifest file named:
+GitVault uses a manifest file named:
 
 ```text
 .git_vault
@@ -104,7 +104,7 @@ Run:
 .\git_vault\windows.ps1 encrypt
 ```
 
-VaultGit will:
+GitVault will:
 
 1. Read `.git_vault`
 2. Collect all listed files
@@ -133,7 +133,7 @@ Run:
 .\git_vault\windows.ps1 decrypt
 ```
 
-VaultGit will:
+GitVault will:
 
 1. Ask for password
 2. Read `vault.blob`
@@ -230,7 +230,7 @@ Absolute paths are never written into the vault.
 
 # Root Detection
 
-VaultGit treats the directory containing:
+GitVault treats the directory containing:
 
 ```text
 .git_vault
@@ -261,7 +261,7 @@ still operates on the project root.
 
 # Security
 
-VaultGit stores:
+GitVault stores:
 
 ```text
 vault.blob
@@ -269,7 +269,7 @@ vault.blob
 
 inside Git.
 
-VaultGit never stores:
+GitVault never stores:
 
 ```text
 passwords
@@ -297,7 +297,7 @@ If multiple developers modify the same vault simultaneously, conflicts must be r
 
 ## Intended Usage
 
-VaultGit is primarily designed for:
+GitVault is primarily designed for:
 
 - Solo developers
 - Multiple development machines
